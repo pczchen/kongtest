@@ -1,0 +1,22 @@
+<!doctype html>
+<title>API stats</title>
+
+<body>
+<center>
+    <h2>Kong Tables</h2>
+    <br/>
+    
+	{% if tables %}
+	<table cellspacing=1 cellpadding=1 bgcolor="green" width="40%">
+    <tr bgcolor="#ccff99"><th>table name</th><th>action</th></tr>
+    {% for table in tables %}
+    <tr bgcolor="#cc99ff">
+      <td>{{ table }}</td>
+      <td><a href="{{ url_for('show_data', table=table) }}">show</a></td>
+    </tr>
+    {% endfor %}
+   
+    </table>
+	{% endif %}
+</center>	
+</body>

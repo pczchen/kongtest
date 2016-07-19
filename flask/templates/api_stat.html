@@ -1,0 +1,42 @@
+<!doctype html>
+<title>API stats</title>
+
+<body>
+<center>
+    <h2>Kong API Access Stats</h2>
+    <br/>
+    
+	{% if table %}
+	<table cellspacing=1 cellpadding=1 bgcolor="green" width="60%">
+    <tr bgcolor="#cc99ff">
+    {# for hh in table[0].keys() #}
+      <th>{{ "api" }}</th>
+      <th>{{ "access" }}</th>
+      <th>{{ "kong" }}</th>
+      <th>{{ "kong.max" }}</th>
+      <th>{{ "proxy" }}</th>
+      <th>{{ "proxy.max" }}</th>
+      <th>{{ "request" }}</th>
+      <th>{{ "request.max" }}</th>
+      <th>{{ "last.access.time" }}</th>
+    {# endfor #}
+    </tr>
+    
+    {% for ff in table %}
+      <tr bgcolor="white" >
+
+        <td>{{ ff["key"] }}</td>
+        <td align="right">{{ ff["doc_count"] }}</td>
+        <td align="right">{{ "%.1f" % ff["latencies.kong"]["value"] }}</td>
+        <td align="right">{{ "%.1f" % ff["latencies.kong.max"]["value"] }}</td>
+        <td align="right">{{ "%.1f" % ff["latencies.proxy"]["value"] }}</td>
+        <td align="right">{{ "%.1f" % ff["latencies.proxy.max"]["value"] }}</td>
+        <td align="right">{{ "%.1f" % ff["latencies.request"]["value"] }}</td>
+        <td align="right">{{ "%.1f" % ff["latencies.request.max"]["value"] }}</td>      
+		<td align="center">{{ ff["last.access.time"]["value"] }}</td> 
+      </tr>
+    {% endfor %}
+    </table>
+	{% endif %}
+</center>	
+</body>

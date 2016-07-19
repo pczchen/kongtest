@@ -1,0 +1,43 @@
+<!doctype html>
+<title>Elastic stats</title>
+
+<body>
+<center>
+    <h2> Elastic Stats</h2>
+    <br/>
+    
+	{% if table %}
+	<table cellspacing=1 cellpadding=1 bgcolor="green" width="80%">
+    <tr bgcolor="#cc99ff">
+    {# for hh in table[0].keys() #}
+      <th>{{ "index" }}</th>
+      <th>{{ "status" }}</th>
+      <th>{{ "health" }}</th>
+      <th>{{ "pri" }}</th>
+      <th>{{ "rep" }}</th>
+      <th>{{ "docs.count" }}</th>
+      <th>{{ "docs.deleted" }}</th>
+      <th>{{ "store.size" }}</th>
+      <th>{{ "pri.store.size" }}</th>
+    {# endfor #}
+    </tr>
+    
+    {% for ff in table %}
+      <tr bgcolor="white" >
+
+        <td>{{ ff["index"] }}</td>
+        <td align="center">{{ ff["status"] }}</td>
+        <td align="center">{{ ff["health"] }}</td>
+        <td align="center">{{ ff["pri"] }}</td>
+        <td align="center">{{ ff["rep"] }}</td>
+        <td align="center">{{ ff["docs.count"] }}</td>
+        <td align="center">{{ ff["docs.deleted"] }}</td>
+        <td align="right">{{ ff["store.size"] }}</td>
+        <td align="right">{{ ff["pri.store.size"] }}</td>        
+
+      </tr>
+    {% endfor %}
+    </table>
+	{% endif %}
+</center>	
+</body>
