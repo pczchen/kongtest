@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Hello from Flask</title>
+
+<center>
+<h1>Hello Flask!</h1>
+{% if urls %}
+<table>
+{% for url in urls %}
+<tr>
+<td><a href="{{ url["url"] }}">{{ url["name"] }}</a></td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<h1>No content!</h1>
+{% endif %}
+</center>

@@ -1,0 +1,91 @@
+#kind=basic username=username password=password
+#GET URL
+#HEAD: VALUE
+
+#kind=key apikey=apikey secret=secret
+#GET URL
+#HEAD: VALUE
+
+#kind=hmac username=username algorithm=algorithm secret=secret  headers=date,content-md5
+#GET URL
+#HEAD: VALUE
+
+#BODY
+
+#kind=oauth2 client_id=client_id client_secret=client_secret provision_key=provision_key authenticated_userid=userid scope=email,phone baseurl=baseurl
+#GET URL
+#HEAD: VALUE
+
+#BODY
+kind=hmac username=HpkvDFeCXnbQAEZB algorithm=hmac-sha1 secret=mmmn5yyy49pVTxuaqJDp5CYrnJRolHvY sigheaders=date,host,content-type
+GET http://10.248.24.236/dps-service/app/taskdetail/infostd/INFOSTDA38666442B2A4C6AA8A24E5C42890EAF
+Content-Type: application/json
+Host: mdmdps.dps.apis.pcloud.sinopec.com
+
+
+kind=hmac username=HpkvDFeCXnbQAEZB algorithm=hmac-sha1 secret=mmmn5yyy49pVTxuaqJDp5CYrnJRolHvY sigheaders=date,content-md5
+GET http://10.248.10.149/dps-service/app/taskdetail/infostd/INFOSTDA38666442B2A4C6AA8A24E5C42890EAF
+Content-Type: application/json
+Host: mdmdps.dps.apis.pcloud.sinopec.com
+
+{"appId":"pmms","businessCode":"A1","businessId":"A2","businessName":"²â333","categoryCode":"Flow2","departmentId":"8","departmentName"
+:"·¨ÂÊÎ²¿","enterpriseId":"","enterpriseName":"","executeDate":1465804459679,"executeDateUtc":1465804459679,"executeId":"754b4382e37a4e
+e68b85ec2bdc4b80d9","extendsData":{"appId":"pmms","businessId":"A3","dataId":"101"},"metasList":[{"appId":"pmms","category":0,"controlT
+ype":0,"dataTypeId":2,"dataValue":"˫¾«¶ȸ¡µã","metaCode":"PayAmount","metaId":"0F07A933CD2DA43FABE9C359FE3B74871","metaName":"sds","orde
+rNo":1}],"organiseId":"01a4d32268f54b90a699f76dd98f1cbe","organiseName":"","organiseType":"","propertyModel":"","section":"","status":"
+","unitId":"5","unitName":"ïÃʯ»¯","userCode":"wf_hw.zhao","userId":"7","userName":"Õºê"}
+
+
+kind=basic username=pczchen password=1qaz2wsx
+GET http://10.248.24.236/testbasic/dps-service/app/taskdetail/infostd/INFOSTDA38666442B2A4C6AA8A24E5C42890EAF
+Content-Type: application/json
+
+{"appId":"pmms","businessCode":"A1","businessId":"A2","businessName":"²â333","categoryCode":"Flow2","departmentId":"8","departmentName"
+:"·¨ÂÊÎ²¿","enterpriseId":"","enterpriseName":"","executeDate":1465804459679,"executeDateUtc":1465804459679,"executeId":"754b4382e37a4e
+e68b85ec2bdc4b80d9","extendsData":{"appId":"pmms","businessId":"A3","dataId":"101"},"metasList":[{"appId":"pmms","category":0,"controlT
+ype":0,"dataTypeId":2,"dataValue":"˫¾«¶ȸ¡µã","metaCode":"PayAmount","metaId":"0F07A933CD2DA43FABE9C359FE3B74871","metaName":"sds","orde
+rNo":1}],"organiseId":"01a4d32268f54b90a699f76dd98f1cbe","organiseName":"","organiseType":"","propertyModel":"","section":"","status":"
+","unitId":"5","unitName":"ïÃʯ»¯","userCode":"wf_hw.zhao","userId":"7","userName":"Õºê"}
+
+
+
+kind=key apikey=apikey secret=apikey1234
+GET http://10.248.24.236/testkey/dps-service/app/taskdetail/infostd/INFOSTDA38666442B2A4C6AA8A24E5C42890EAF
+Content-Type: application/json
+
+{"appId":"pmms","businessCode":"A1","businessId":"A2","businessName":"²â333","categoryCode":"Flow2","departmentId":"8","departmentName"
+:"·¨ÂÊÎ²¿","enterpriseId":"","enterpriseName":"","executeDate":1465804459679,"executeDateUtc":1465804459679,"executeId":"754b4382e37a4e
+e68b85ec2bdc4b80d9","extendsData":{"appId":"pmms","businessId":"A3","dataId":"101"},"metasList":[{"appId":"pmms","category":0,"controlT
+ype":0,"dataTypeId":2,"dataValue":"˫¾«¶ȸ¡µã","metaCode":"PayAmount","metaId":"0F07A933CD2DA43FABE9C359FE3B74871","metaName":"sds","orde
+rNo":1}],"organiseId":"01a4d32268f54b90a699f76dd98f1cbe","organiseName":"","organiseType":"","propertyModel":"","section":"","status":"
+","unitId":"5","unitName":"ïÃʯ»¯","userCode":"wf_hw.zhao","userId":"7","userName":"Õºê"}
+
+
+kind=oauth2 client_id=client_id_test client_secret=client_secret_test provision_key=4db5172303a541b2ba0bde6bcfb7026f authenticated_userid=PCZCHEN scope=email baseurl=https://10.248.24.236/baidu
+POST https://10.248.24.236/baidu
+Content-Type: application/json
+
+project=xxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+kind=hmac username=HpkvDFeCXnbQAEZC algorithm=hmac-sha1 secret=mmmn5yyy49pVTxuaqJDp5CYrnJRolHvY sigheaders=date
+POST http://10.248.24.236/ubs/ubsUserController/getUserByUserId.do?userId=202020
+Content-Type: application/json
+Host: testubs.ubs.apis.pcloud.sinopec.com
+
+
+kind=hmac username=HpkvDFeCXnbQAEZC algorithm=hmac-sha1 secret=mmmn5yyy49pVTxuaqJDp5CYrnJRolHvY sigheaders=date
+GET http://10.248.24.236/ubs/ubsUserController/getLoginVerify.do
+Content-Type: application/json
+Host: testubs.ubs.apis.pcloud.sinopec.com
+Accept-Encoding: gzip, deflate
+
+accountType=12&loginName=xiaolong.wei&password=Weixiaolong1%26
+
+
+kind=hmac username=DDXDXcEweVkFfLfT algorithm=hmac-sha1 secret=Zd9P2AAthqeJfbPvwNcxAT1lz81VlELa sigheaders=date,content-md5
+GET http://10.248.24.236/crm_order_search/crm_order_search/_search?pretty=true
+Content-Type: application/json
+Host: testes.es.apis.pcloud.sinopec.com
+
+{"sort":"createtime"}

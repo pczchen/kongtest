@@ -1,0 +1,27 @@
+<!doctype html>
+<title>API stats</title>
+
+<body>
+<center>
+    <h2>Cassandra table: {{ table }}</h2>
+    <br/>
+    
+	{% if rows %}
+	<table cellspacing=1 cellpadding=1 bgcolor="green" >
+    <tr bgcolor="#cc99ff">
+    {% for cn in rows.column_names %}
+      <th>{{ cn }}</th>
+    {% endfor %}
+    </tr>
+    
+    {% for row in rows %}
+      <tr bgcolor="white">
+        {% for fv in row %}
+        <td nowrap>{{ fv }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </table>
+	{% endif %}
+</center>	
+</body>
